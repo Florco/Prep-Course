@@ -147,7 +147,12 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return Math.round(num);
+  var resto = num % 1;
+   var entero = num - resto;
+   if (resto >= 0.5) {
+     return entero + 1;
+   } else {
+     return entero;
 }
 
 function redondearHaciaArriba(num) {
@@ -159,7 +164,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return Math.random(num); 
+  return Math.random(); 
 }
 
 function esPositivo(numero) {
@@ -170,11 +175,11 @@ function esPositivo(numero) {
   if (num === 0) {
     return false;
   } 
-  else if (num > 0) { 
+  else if(num > 0) { 
   return "es Positivo"; 
   } 
   else {  
-  return "es Verdadero";
+  return "es Negativo";
   }
 }
 
@@ -189,14 +194,15 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  
+  var combinado = Nombre + ' ' + Apellido;
+  return varCombinado;
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  
+ return "Hola " + "Nombre" + "!" 
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -276,4 +282,5 @@ module.exports = {
   areaDelTriangulo,
   deEuroAdolar,
   esVocal,
-};
+}
+}{}
